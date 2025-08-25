@@ -4,7 +4,6 @@
   padding: 0;
 }
 
-/* Main app container */
 .app {
   width: 100vw;
   height: 100vh;
@@ -21,7 +20,6 @@
   background: #f3f2f2;
 }
 
-/* Save button styles */
 .save-button {
   background: white;
   color: #6d7ba5;
@@ -43,7 +41,6 @@
   color: white;
 }
 
-/* Save error message */
 .save-error {
   background: #facacc;
   color: black;
@@ -56,7 +53,6 @@
 .flow-content-wrapper {
   flex: 1;
   display: flex;
-  position: relative;
   overflow: hidden;
 }
 
@@ -121,7 +117,6 @@
   color: #807979;
 }
 
-/* Nodes panel specific styles */
 .node-types-grid {
   display: grid;
   gap: 12px;
@@ -174,7 +169,6 @@
   margin: 0;
 }
 
-/* Settings panel specific styles */
 .setting-group {
   display: flex;
   flex-direction: column;
@@ -206,7 +200,6 @@
   color: #a0aec0;
 }
 
-/* Floating nodes panel trigger button */
 .nodes-panel-trigger {
   display: flex;
   flex-direction: column;
@@ -230,7 +223,6 @@
   color: #6d7ba5;
 }
 
-/* Text node styles */
 .text-node {
   background: white;
   border: 1px solid #cbd5e0;
@@ -239,7 +231,6 @@
   min-width: 250px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease;
-  position: relative;
   max-width: 300px;
   white-space: wrap;
 }
@@ -287,7 +278,6 @@
   border-radius: 0 0 7px 7px;
 }
 
-/* Handle styles */
 .handle {
   width: 8px;
   height: 8px;
@@ -303,56 +293,13 @@
   background: #3182ce;
 }
 
-/* React Flow customizations */
-.react-flow__controls {
-  bottom: 20px;
-  left: 20px;
-}
-
-.react-flow__controls-button {
-  background: white;
-  border: 1px solid #cbd5e0;
-  color: #4a5568;
-}
-
-.react-flow__controls-button:hover {
-  background: #f7fafc;
-}
-
-.react-flow__edge-path {
-  stroke: #a0aec0;
-  stroke-width: 2;
-}
-
-.react-flow__edge.selected .react-flow__edge-path {
-  stroke: #4299e1;
-  stroke-width: 3;
-}
-
-.react-flow__connection-line {
-  stroke: #4299e1;
-  stroke-width: 2;
-  stroke-dasharray: 5, 5;
-}
-
 /* Responsive design */
 @media (max-width: 768px) {
+  .flow-content-wrapper {
+    flex-direction: column-reverse;
+  }
+
   .sidebar {
     width: 100%;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    z-index: 20;
-  }
-
-  .nodes-panel-trigger {
-    top: 10px;
-    left: 10px;
-    padding: 8px 12px;
-  }
-
-  .app-header {
-    padding: 8px 16px;
   }
 }
